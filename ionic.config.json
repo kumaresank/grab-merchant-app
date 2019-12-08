@@ -1,5 +1,7 @@
 {
   "name": "grab-merchant",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

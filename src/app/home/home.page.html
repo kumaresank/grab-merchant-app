@@ -1,14 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="logo">
+    <img src="/assets/grab.png">
+    <span>Merchant</span>
+  </div>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-card>
+      <ion-card-content>
+        <img *ngIf="generated !=''" [src]="generated" />
+      </ion-card-content>
+    </ion-card>
+    <div class="merchant-id">{{name}}</div>
   </div>
 </ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom">
+    <ion-button color="success" class="footer-btn" mode="ios" (click)="verify()" expand="full">Verify</ion-button>
+  </ion-toolbar>
+</ion-footer>
